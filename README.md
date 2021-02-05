@@ -1,2 +1,3 @@
-# Word_Guesser
+Word guessing game.
 Homework for CSCE 306
+Coded in C++
