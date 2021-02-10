@@ -4,7 +4,9 @@
  *  Created on: Feb 3, 2021
  *      Author: lilga
  */
-
+#include <string>
+#include <vector>
+#include <fstream>
 #ifndef DICTIONARY_H_
 #define DICTIONARY_H_
 
@@ -16,7 +18,7 @@ public:
 	Dictionary();
 	Dictionary(string);
 	void setWord(string);
-	string getRandWord();
+	string getRandWord(string);
 };
 
 #endif /* DICTIONARY_H_ */

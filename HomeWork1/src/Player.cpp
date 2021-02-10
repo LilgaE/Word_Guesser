@@ -8,6 +8,7 @@
 using namespace std;
 #include "Player.h"
 
+
 Player::Player(string n, int w, int l) {
 	_name = n;
 	_wins = w;
@@ -37,7 +38,9 @@ void Player::savePlayer(){
 	//write to file with data
 
 }
-Player Player::loadPlayer{
+Player Player::loadPlayer(){
+	//get file into this
+	for (int i = 0; i > )
 	//read file to get player
 
 }

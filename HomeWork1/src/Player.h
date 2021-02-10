@@ -4,7 +4,9 @@
  *  Created on: Feb 3, 2021
  *      Author: lilga
  */
-
+#include <string>
+#include <vector>
+#include <fstream>
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
