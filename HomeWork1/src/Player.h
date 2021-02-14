@@ -19,13 +19,11 @@ public:
 	Player();
 	Player(string, int, int);
 	void setPname(string);
-	void setWins(int);
-	void setLosses(int);
+	void incWins();
+	void incLosses();
 	string getPname()const;
 	int getWins()const;
 	int getLosses()const;
-	void savePlayer();
-	Player loadPlayer();
 };
 
 

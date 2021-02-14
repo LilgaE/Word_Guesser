@@ -4,9 +4,11 @@
  *  Created on: Feb 3, 2021
  *      Author: lilga
  */
+#include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
+using namespace std;
 using namespace std;
 #include "Dictionary.h"
 
@@ -15,8 +17,10 @@ Dictionary::Dictionary(string w) {
 
 }
 void Dictionary::setWord(string w){
-	//write to a file
-
+	ofstream UserWords;
+	UserWords.open ("Uwords.txt");
+	UserWords << w <<"\n";
+	UserWords.close();
 }
 string Dictionary::getRandWord(string f){
 	//pre (What you want/expect coming in)
@@ -28,10 +32,7 @@ string Dictionary::getRandWord(string f){
 	vector<string> WordVec;
 	ifstream infile(f);
 	if(!infile){
-		cout << "file not found" << endl;
 			exit(-1);
-	}else{
-		cout << "file loaded" << endl;
 	}
 		string word;
 		infile >> word;
@@ -39,8 +40,7 @@ string Dictionary::getRandWord(string f){
 			WordVec.push_back(word);
 			infile >> word;
 	}
-	_word = WordVec[rand() % WordVec.size()];
-	return _word;
+	return WordVec[rand() % 100];
 }
 
 

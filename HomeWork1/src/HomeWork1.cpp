@@ -17,21 +17,45 @@ using namespace std;
 
 int main() {
 	int RunTest = 0;
-	Dictionary test;
+	int Kplaying = 1;
+	Dictionary Dict;
+	Player Play;
+	GameState GS;
+	string openFile;
+	string user = "test";
+
+
+
+
 
 	cout << "Welcome to the wild word guessing game!" << endl << "Please enter 1 to use the premade dictionary." << endl << "Please enter 2 to create your own dictionary." << endl << "Please enter 3 to not play, and end the program, like a loser XD.";
+	//First prompt
+
 	cin >> RunTest;
+
 	if (RunTest == 1){
-		cout << test.getRandWord("Words.txt") << endl;
+		openFile = "Words.txt";
 
 	}
 	if (RunTest == 2){
-
+		cout << "Please enter a word." << endl;
+		cout << "Please enter a single ! to finish entering word." << endl;
+		while (user != "!"){
+		cin >> user;
+		Dict.setWord(user);
+		}
+		openFile = "Words.txt";
 		}
 	if (RunTest == 3){
-		cout << "Goodbye loser :P" << endl;
+		cout << "Have a nice day!" << endl;
 		exit(0);
 		}
+		GS.setWord(Dict.getRandWord(openFile));
+	while (Kplaying != 0){
+
+
+
+	}
 
 	return 0;
 }

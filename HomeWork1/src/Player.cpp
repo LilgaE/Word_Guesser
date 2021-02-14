@@ -18,11 +18,11 @@ void Player::setPname(string n){
 		_name = n;
 	}
 
-void Player::setWins(int w){
-		_wins = w;
+void Player::incWins(){
+		_wins++;
 	}
-void Player::setLosses(int l){
-		_losses = l;
+void Player::incLosses(){
+		_losses++;
 	}
 string Player::getPname()const{
 	return _name;
@@ -34,16 +34,6 @@ int Player::getWins()const{
 int Player::getLosses()const{
 	return _losses;
 	}
-void Player::savePlayer(){
-	//write to file with data
-
-}
-Player Player::loadPlayer(){
-	//get file into this
-	for (int i = 0; i > )
-	//read file to get player
-
-}
 
 
 

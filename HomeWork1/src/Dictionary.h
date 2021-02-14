@@ -4,9 +4,11 @@
  *  Created on: Feb 3, 2021
  *      Author: lilga
  */
+#include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
+using namespace std;
 #ifndef DICTIONARY_H_
 #define DICTIONARY_H_
 

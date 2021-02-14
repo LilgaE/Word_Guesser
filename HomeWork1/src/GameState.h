@@ -13,18 +13,24 @@
 class GameState {
 private:
 	string _Word;
-	string _Uword;
+	string _Guess;
 	int _numGuess;
-	int _incGuess;
+
 
 
 public:
 	GameState();
+	GameState(string , int);
+	void setWord(string);
+	void userGuess(string);
+	int getGuess();
+	void checkGuess();
+
 };
+
 
 #endif /* GAMESTATE_H_ */
 
 //search with while loop
 //every letter
-//lmao im bored
 
