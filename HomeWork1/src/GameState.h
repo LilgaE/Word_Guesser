@@ -12,23 +12,20 @@
 
 class GameState {
 private:
-	string _Word;
-	string _Guess;
+	string _word;
+	string _guess;
+	string _wordState;
 	int _numGuess;
-
-
-
 public:
 	GameState();
-	GameState(string , int);
+	GameState(string ,string , int);
 	void setWord(string);
-	void userGuess(string);
+	string getWord()const;
+	string checkGuess(string);
 	int getGuess();
-	void checkGuess();
-
+	string wordState();
+	void setWordState(string, int);
 };
-
-
 #endif /* GAMESTATE_H_ */
 
 //search with while loop

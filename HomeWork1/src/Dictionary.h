@@ -14,11 +14,11 @@ using namespace std;
 
 class Dictionary {
 private:
-	string _word;
+	vector<string> _word;
 
 public:
-	Dictionary();
-	Dictionary(string);
+	Dictionary(){}
+	Dictionary(vector<string>);
 	void setWord(string);
 	string getRandWord(string);
 };

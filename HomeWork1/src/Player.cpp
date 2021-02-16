@@ -17,7 +17,6 @@ Player::Player(string n, int w, int l) {
 void Player::setPname(string n){
 		_name = n;
 	}
-
 void Player::incWins(){
 		_wins++;
 	}
@@ -26,7 +25,6 @@ void Player::incLosses(){
 	}
 string Player::getPname()const{
 	return _name;
-
 	}
 int Player::getWins()const{
 	return _wins;
