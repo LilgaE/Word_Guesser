@@ -14,17 +14,17 @@ class GameState {
 private:
 	string _word;
 	string _guess;
-	string _wordState;
+	vector<string> _wordState;
 	int _numGuess;
 public:
 	GameState();
 	GameState(string ,string , int);
 	void setWord(string);
 	string getWord()const;
-	string checkGuess(string);
+	int checkGuess(string);
 	int getGuess();
 	string wordState();
-	void setWordState(string, int);
+	void setWordState(vector<string>);
 };
 #endif /* GAMESTATE_H_ */
 

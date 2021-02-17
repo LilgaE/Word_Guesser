@@ -15,36 +15,29 @@ GameState::GameState(string w,string g, int n) {
 		_word = w;
 		_guess = g;
 		_numGuess = n;
-		_wordState = w;
+		_wordState;
 }
 void GameState::setWord(string w){
 	_word = w;
 	}
-string GameState::checkGuess(string g){
-	string temp = _word;
+int GameState::checkGuess(string g){
 	if (g.size() < 1){
-		for (int i = 0 ; i < temp.size(); i++){
-			if(g[0] == (temp[i])){
-				setWordState(g,i);
+		for (int i = 0 ; i < _word.size(); i++){
+			if(g[0] == (_word[i])){
+				return i;
 			}
 		}
 	}
 	if(g == _word){
-		return _word;
+		return 999;
 	}
-	return _wordState;
+	return -1;
 	}
 int GameState::getGuess(){
 	return 0;
-	}
-void GameState::setWordState(string g, int t){
-	_wordState[t] = g;
 }
-string GameState::wordState(){
-	for (int i = 0; i < _wordState.size(); i++){
-			 _wordState[i] = "_";
-		 }
-	return _wordState;
+void GameState::setWordState(vector<string> w){
+	_wordState = w;
 }
 
 
