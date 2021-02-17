@@ -10,34 +10,36 @@
 using namespace std;
 #include "GameState.h"
 
-
-GameState::GameState(string w,string g, int n) {
+GameState::GameState(){}
+GameState::GameState(string w,string u,char g, int n) {
 		_word = w;
+		_uword = u;
 		_guess = g;
 		_numGuess = n;
-		_wordState;
 }
 void GameState::setWord(string w){
 	_word = w;
 	}
-int GameState::checkGuess(string g){
-	if (g.size() < 1){
-		for (int i = 0 ; i < _word.size(); i++){
-			if(g[0] == (_word[i])){
-				return i;
-			}
-		}
+void GameState::setUword(string u){
+	_uword = u;
 	}
-	if(g == _word){
-		return 999;
+int GameState::checkGuess(char g){
+	int test = _word.size();
+	int i = 0;
+	char test2;
+	while(i<=test){
+		test2=_word[i];
+		if(g == test2){
+			return i;
+		}
+		i++;
 	}
 	return -1;
-	}
+}
 int GameState::getGuess(){
-	return 0;
+	return _numGuess;
 }
-void GameState::setWordState(vector<string> w){
-	_wordState = w;
+void GameState::incguess(){
+	_numGuess++;
 }
-
 

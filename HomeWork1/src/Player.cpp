@@ -8,7 +8,7 @@
 using namespace std;
 #include "Player.h"
 
-
+Player::Player(){}
 Player::Player(string n, int w, int l) {
 	_name = n;
 	_wins = w;

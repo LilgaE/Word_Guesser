@@ -13,18 +13,18 @@
 class GameState {
 private:
 	string _word;
-	string _guess;
-	vector<string> _wordState;
+	string _uword;
+	char _guess;
 	int _numGuess;
 public:
 	GameState();
-	GameState(string ,string , int);
+	GameState(string ,string, char , int);
 	void setWord(string);
+	void setUword(string);
 	string getWord()const;
-	int checkGuess(string);
+	int checkGuess(char);
 	int getGuess();
-	string wordState();
-	void setWordState(vector<string>);
+	void incguess();
 };
 #endif /* GAMESTATE_H_ */
 

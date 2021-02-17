@@ -17,10 +17,12 @@ private:
 	vector<string> _word;
 
 public:
-	Dictionary(){}
+	Dictionary();
 	Dictionary(vector<string>);
 	void setWord(string);
-	string getRandWord(string);
+	void fromfile(string);
+	string getRandWord();
+
 };
 
 #endif /* DICTIONARY_H_ */
